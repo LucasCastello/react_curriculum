@@ -1,0 +1,28 @@
+.personal_info {
+    background-color: white;
+    border-radius: 6px;
+}
+
+.title {
+    padding: 5px;
+    line-height: 20px;
+}
+
+.name {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.role {
+    color: #777;
+    font-size: 13px;
+}
+
+.infos {
+    font-size: large;
+}
+
+img {
+    width: 100%;
+}
