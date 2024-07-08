@@ -13,6 +13,12 @@
   -moz-osx-font-smoothing: grayscale; */
 }
 
+body {
+  /* background-color: #fafafa; */
+  overflow: hidden;
+  background: url("./assets/bg-1.png");
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
