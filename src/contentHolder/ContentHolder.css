@@ -1,3 +1,16 @@
 .content_holder {
-    background-color: blue;
+    background-color: white;
+    display: flex;
+    padding: 1rem 2rem;
+    margin: 20px 0;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.ant-timeline-item-last {
+    padding-bottom: 0 !important;
+}
+
+.ant-timeline-item-last .ant-timeline-item-content {
+    min-height: 0 !important;
 }
