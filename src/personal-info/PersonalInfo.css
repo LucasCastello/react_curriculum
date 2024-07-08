@@ -26,3 +26,10 @@
 img {
     width: 100%;
 }
+
+.contact_buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    flex-wrap: wrap;
+}

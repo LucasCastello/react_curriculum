@@ -1,8 +1,17 @@
-import ProfilePicture from '../assets/Foto de Perfil.jpeg'
+import { Button } from 'antd'
+import { MailFilled, LinkedinFilled, GithubFilled } from '@ant-design/icons'
+import FaceImage from '../assets/Face.jpeg'
+// import ProfilePicture from './ProfilePicture';
+import Resume from '../assets/LucasCastelloResume.pdf'
 import './PersonalInfo.css'
-import {  Button } from '@mui/material'
 
-function PersonalInfo () {
+export default function PersonalInfo () {
+    const openTab = (url : string) => {window.open(url, "_blank", "noreferrer")}
+    const copyToClipboard = (str : string) => {
+        navigator.clipboard.writeText(str)
+        alert("Copied email to clipboard ")
+    }
+    
     return (
         <div className="personal_info">
             <div className='title'>
@@ -10,20 +19,18 @@ function PersonalInfo () {
                 <br/>
                 <span className='role'>Developer</span>
             </div>
-
-            <img src={ProfilePicture} alt="Profile picture" />
-            <div className='infos'>
-                <span className='email'>E-mail: lucas.castello314@gmail.com</span>
-                <br/>
-                <span>LinkedIn: </span>
-                <a href='https://www.linkedin.com/in/lucastello/' className='linkedin'>lucastello</a>
-                <br/>
-                <span>GitHub: </span>
-                <a href='https://github.com/LucasCastello' className='github'>LucasCastello</a>
+            <img src={FaceImage} alt="Profile picture" />
+            {/* <ProfilePicture showFace={true}/> */}
+            <div className='contact_buttons'>
+                <div>
+                    <Button type='text' icon={<MailFilled style={{fontSize: '20px'}}/>} onClick={() => copyToClipboard('lucas.castello314@gmail.com')}/>
+                    <Button type='text' icon={<GithubFilled style={{fontSize: '20px'}}/>} onClick={() => openTab('https://www.linkedin.com/in/lucastello/')}/>
+                    <Button type='text' icon={<LinkedinFilled style={{fontSize: '20px'}}/>} onClick={() => openTab('https://github.com/LucasCastello')}/>
+                </div>
+                <a href={Resume} download="LucasCastelloResume" target='_blank'>
+                    <Button>Download CV</Button>
+                </a>
             </div>
-            <Button className='download_button' variant='contained'>Download CV</Button>
         </div>
     )
 }
-
-export default PersonalInfo
