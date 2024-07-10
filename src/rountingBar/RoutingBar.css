@@ -1,3 +1,37 @@
 .routing_bar {
-    background-color: brown;
+    background-color: white;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
+
+.home_button {
+    color: white;
+    background-color: black;
+    height: 100%;
+    width: 3rem;
+    border-radius: 0;
+    box-shadow: none;
+    transition: 0.2s;
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.738);
+    }
+}
+
+.home_icon {
+    font-size: large;
+}
+/* 
+:where(.css-dev-only-do-not-override-f7vrd6).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {
+    background: black;
+}
+
+:where(
+    .css-dev-only-do-not-override-f7vrd6,
+    .css-dev-only-do-not-override-f7vrd6,
+    .resume_button
+    ).ant-btn-text:not(:disabled):not(.ant-btn-disabled):hover {
+    background: none;
+    color: yellow;
+} */

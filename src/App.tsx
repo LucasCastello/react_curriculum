@@ -1,22 +1,8 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import {Container, Grid } from '@mui/material'
 import PersonalInfo from './personal-info/PersonalInfo'
-import ContentHolder from './contentHolder/ContentHolder'
 import RoutingBar from './rountingBar/RoutingBar'
 import Footer from './footer/Footer'
-import './App.css'
-import Portfolio from './portfolio/Portfolio'
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <ContentHolder />
-  },
-  {
-    path: '/portfolio',
-    element: <Portfolio />
-  }
-])
 
 function App() {
 
@@ -28,7 +14,7 @@ function App() {
         </Grid>
         <Grid item xs>
           <RoutingBar />
-          <RouterProvider router={router}/>
+          <Outlet />
           <Footer />
         </Grid>
       </Grid>
