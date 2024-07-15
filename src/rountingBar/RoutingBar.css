@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .home_button {
@@ -13,6 +14,7 @@
     width: 3rem;
     border-radius: 0;
     box-shadow: none;
+    border: none;
     transition: 0.2s;
     &:hover {
         background-color: rgba(0, 0, 0, 0.738);
@@ -21,6 +23,10 @@
 
 .home_icon {
     font-size: large;
+}
+
+.resume_button, .portfolio_button {
+    height: 100%;
 }
 /* 
 :where(.css-dev-only-do-not-override-f7vrd6).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {

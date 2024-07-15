@@ -1,6 +1,7 @@
 .personal_info {
     background-color: white;
     border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .title {
@@ -32,4 +33,12 @@ img {
     justify-content: space-between;
     padding: 0.5rem 0;
     flex-wrap: wrap;
+}
+
+.download_button {
+    margin-right: 0.5em;
+    color: black;
+    &:hover {
+        color: red;
+    }
 }
