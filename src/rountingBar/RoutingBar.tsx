@@ -1,23 +1,37 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from 'antd'
 import './RoutingBar.css'
-import { HomeOutlined } from '@ant-design/icons'
 
 function RoutingBar() {
+    enum Styles {
+        LIGHT = 'lightSelector',
+        DARK = 'darkSelector'
+    }
+    const [homeStyle, setHomeStyle] = useState<Styles>(Styles.LIGHT)
+    const [resumeStyle, setResumeStyle] = useState<Styles>(Styles.DARK)
+    const [portfolioStyle, setPortfolioStyle] = useState<Styles>(Styles.DARK)
+
+    function changeStyles(lightStyleSetter: (style: Styles)=> void) {
+        setHomeStyle(Styles.DARK)
+        setResumeStyle(Styles.DARK)
+        setPortfolioStyle(Styles.DARK)
+
+        lightStyleSetter(Styles.LIGHT)
+    }
     return (
         <div className='routing_bar'>
-            <button className='home_button'>
+            <Button className={homeStyle} type='text' onClick={() => {changeStyles(setHomeStyle)}}>
                 <Link to={'/'}>
-                    <HomeOutlined style={{fontSize: '22px'}}/>
+                    About me
                 </Link>
-            </button>
-            {/* <Button type='primary' size='large' icon={<HomeOutlined style={{fontSize: '22px'}}/>}/> */}
-            <Button className='resume_button' type='text'>
+            </Button>
+            <Button className={resumeStyle} type='text' onClick={() => {changeStyles(setResumeStyle)}}>
                 <Link to={'/resume'}>
                     Resume
                 </Link>
             </Button>
-            <Button className='portfolio_button' type='text'>
+            <Button className={portfolioStyle} type='text' onClick={() => {changeStyles(setPortfolioStyle)}}>
                 <Link to={'/portfolio'}>
                     Portfolio
                 </Link>
