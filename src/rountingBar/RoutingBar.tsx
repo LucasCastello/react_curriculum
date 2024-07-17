@@ -21,21 +21,21 @@ function RoutingBar() {
     }
     return (
         <div className='routing_bar'>
-            <Button className={homeStyle} type='text' onClick={() => {changeStyles(setHomeStyle)}}>
-                <Link to={'/'}>
+            <Link to={'/'}>
+                <Button className={homeStyle} type='text' onClick={() => {changeStyles(setHomeStyle)}}>
                     About me
-                </Link>
-            </Button>
-            <Button className={resumeStyle} type='text' onClick={() => {changeStyles(setResumeStyle)}}>
-                <Link to={'/resume'}>
+                </Button>
+            </Link>
+            <Link to={'/resume'}>
+                <Button className={resumeStyle} type='text' onClick={() => {changeStyles(setResumeStyle)}}>
                     Resume
-                </Link>
-            </Button>
-            <Button className={portfolioStyle} type='text' onClick={() => {changeStyles(setPortfolioStyle)}}>
-                <Link to={'/portfolio'}>
+                </Button>
+            </Link>
+            <Link to={'/portfolio'}>
+                <Button className={portfolioStyle} type='text' onClick={() => {changeStyles(setPortfolioStyle)}}>
                     Portfolio
-                </Link>
-            </Button>
+                </Button>
+            </Link>
         </div>
     )
 }
