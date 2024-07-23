@@ -15,3 +15,17 @@
 .ant-timeline-item-last .ant-timeline-item-content {
     min-height: 0 !important;
 }
+
+.ant-timeline-item-head {
+    border-radius: 50%;
+    width: 40px;
+    background-color: #52c41a;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .working_timeline {
+    width: 600px;
+} */

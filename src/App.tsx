@@ -2,7 +2,6 @@ import { Outlet } from 'react-router-dom'
 import {Container, Grid } from '@mui/material'
 import PersonalInfo from './personal-info/PersonalInfo'
 import RoutingBar from './rountingBar/RoutingBar'
-import Footer from './footer/Footer'
 
 function App() {
 
@@ -15,7 +14,6 @@ function App() {
         <Grid item xs>
           <RoutingBar />
           <Outlet />
-          <Footer />
         </Grid>
       </Grid>
     </Container>
