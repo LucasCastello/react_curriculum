@@ -28,7 +28,7 @@ function RoutingBar() {
             </Link>
             <Link to={'/resume'}>
                 <Button className={resumeStyle} type='text' onClick={() => {changeStyles(setResumeStyle)}}>
-                    Resume
+                    Curriculum
                 </Button>
             </Link>
             <Link to={'/portfolio'}>

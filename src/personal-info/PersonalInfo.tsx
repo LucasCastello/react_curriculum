@@ -33,7 +33,7 @@ export default function PersonalInfo () {
                 </div>
                 <a href={Resume} download="LucasCastelloResume" target='_blank'>
                     <Button className='download_button'>
-                        <span>Download CV</span>
+                        <span>Resume</span>
                         <span><DownloadOutlined /></span>
                     </Button>
                 </a>
