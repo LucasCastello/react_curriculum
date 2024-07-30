@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87); */
-  background-color: #eeeeee;
+  background-color: #c76b6b;
 
   /* font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,7 +15,16 @@
 
 body {
   /* background-color: #fafafa; */
-  background: url("./assets/bg-1.png");
+  background: url("./assets/castle_background.jpeg");
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 880px;
+  min-height: 100vh;
+}
+
+.anticon {
+  vertical-align: -0.15em;
 }
 
 /* :root {
