@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87); */
-  background-color: #c76b6b;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./assets/castle_background.jpeg');
 
   /* font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,10 +15,10 @@
 
 body {
   /* background-color: #fafafa; */
-  background: url("./assets/castle_background.jpeg");
+  /* background: url("./assets/castle_background.jpeg"); */
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* display: flex; */
+  /* place-items: center; */
   min-width: 880px;
   min-height: 100vh;
 }
