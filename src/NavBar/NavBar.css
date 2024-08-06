@@ -1,12 +1,18 @@
 .routing_bar {
-    background-color: black;
+    top: 0;
+    height: 80px;
     width: 100%;
-    height: 4rem;
     position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-width: 880px;
+    &.not_scrolled {
+        background-color: transparent;
+    }
+    &.scrolled {
+        background-color: #000;
+    }
 }
 
 .logo {
@@ -16,6 +22,9 @@
     border: none;
     padding: 0;
     margin-left: 3rem;
+    &.not_scrolled {
+        display: none;
+    }
 }
 
 .right_side {

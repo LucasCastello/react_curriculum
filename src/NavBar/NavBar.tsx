@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { message } from 'antd';
 import { MailFilled, LinkedinFilled, GithubFilled, DownloadOutlined } from '@ant-design/icons'
 import logo from '../assets/castle_logo.png'
@@ -5,6 +6,7 @@ import resume from '../assets/LucasCastelloResume.pdf'
 import './NavBar.css'
 
 export default function NavBar() {
+    const [scrolled, setScrolled] = useState(false)
     const [messageApi, contextHolder] = message.useMessage();
     const displayInfo = () => {
         messageApi.open({
@@ -15,11 +17,25 @@ export default function NavBar() {
     };
     const openTab = (url : string) => {window.open(url, "_blank", "noreferrer")}
 
+    useEffect(() => {
+        const onScroll = () => {
+          if (window.scrollY > 50) {
+            setScrolled(true);
+          } else {
+            setScrolled(false);
+          }
+        }
+    
+        window.addEventListener("scroll", onScroll);
+    
+        return () => window.removeEventListener("scroll", onScroll);
+      }, [])
+
     return (
-        <div className='routing_bar'>
+        <div className={scrolled ? 'routing_bar scrolled' : 'routing_bar not_scrolled'}>
             {contextHolder}
             <div>
-                <button className='logo'>
+                <button className={scrolled ? 'logo' : 'logo not_scrolled'}>
                     <img src={logo} alt="logo" style={{height: 'inherit', width: 'inherit'}}/>
                 </button>
             </div>
